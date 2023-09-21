@@ -19,7 +19,7 @@ const IphoneStatusBar = NativeModules.IphoneStatusBar
 
 const StatusBarHeight = Platform.select({
   android: 0,
-  ios: IphoneStatusBar.statusBarHeight
+  ios: IphoneStatusBar.statusBarHeight,
 });
 
 export default StatusBarHeight;
