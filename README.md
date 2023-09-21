@@ -2,6 +2,8 @@
 
 Small library that helps you to get status bar height, P.S iPhone 6/7/8/X/11/12/13/14/15
 
+[![NPM](https://img.shields.io/npm/v/react-native-iphone-status-bar.svg)](https://www.npmjs.com/package/react-native-iphone-status-bar) [![MIT License](https://img.shields.io/badge/license-MIT-blue)](https://github.com/transitive-bullshit/chatgpt-api/blob/main/license) [![Prettier Code Formatting](https://img.shields.io/badge/code_style-prettier-brightgreen.svg)](https://prettier.io)
+
 ## Installation
 
 ```sh
