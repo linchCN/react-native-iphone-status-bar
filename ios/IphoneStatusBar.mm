@@ -3,16 +3,16 @@
 @implementation IphoneStatusBar
 RCT_EXPORT_MODULE()
 
-// Example method
-// See // https://reactnative.dev/docs/native-modules-ios
-RCT_EXPORT_METHOD(multiply:(double)a
-                  b:(double)b
-                  resolve:(RCTPromiseResolveBlock)resolve
-                  reject:(RCTPromiseRejectBlock)reject)
+- (NSDictionary *)constantsToExport
 {
-    NSNumber *result = @(a * b);
-
-    resolve(result);
+    CGFloat height = 0.0;//最终高度存储容器
+    if (@available(iOS 13.0, *)) {
+        CGFloat topHeight = [UIApplication sharedApplication].windows.firstObject.safeAreaInsets.top;
+        height = topHeight ? topHeight : 20.0;
+    }else {
+        height = [[UIApplication sharedApplication] statusBarFrame].size.height;
+    }
+  return @{ @"statusBarHeight": [NSNumber numberWithFloat:height] };
 }
 
 

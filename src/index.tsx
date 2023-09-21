@@ -17,6 +17,9 @@ const IphoneStatusBar = NativeModules.IphoneStatusBar
       }
     );
 
-export function multiply(a: number, b: number): Promise<number> {
-  return IphoneStatusBar.multiply(a, b);
-}
+const StatusBarHeight = Platform.select({
+  android: 0,
+  ios: IphoneStatusBar.statusBarHeight
+});
+
+export default StatusBarHeight;

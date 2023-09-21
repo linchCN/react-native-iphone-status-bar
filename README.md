@@ -1,21 +1,24 @@
 # react-native-iphone-status-bar
 
-Small library that helps you to get status bar height, P.S iPhone (6/7/8/X/11/12/13/14/15)
+Small library that helps you to get status bar height, P.S iPhone 6/7/8/X/11/12/13/14/15
 
 ## Installation
 
 ```sh
 npm install react-native-iphone-status-bar
+# OR
+yarn add react-native-status-bar-height
+
+cd ios && pod install
 ```
 
 ## Usage
 
 ```js
-import { multiply } from 'react-native-iphone-status-bar';
+import StatusBarHeight from 'react-native-iphone-status-bar';
 
-// ...
-
-const result = await multiply(3, 7);
+// iPhone 15: 56
+console.info(StatusBarHeight)
 ```
 
 ## Contributing

@@ -1,7 +1,7 @@
 {
   "name": "react-native-iphone-status-bar",
   "version": "0.1.0",
-  "description": "Small library that helps you to get status bar height, P.S iPhone (6/7/8/X/11/12/13/14/15)",
+  "description": "Small library that helps you to get status bar height, P.S iPhone 6/7/8/X/11/12/13/14/15",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
   "types": "lib/typescript/src/index.d.ts",
@@ -31,17 +31,13 @@
     "typecheck": "tsc --noEmit",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
     "prepack": "bob build",
-    "release": "release-it",
-    "example": "yarn --cwd example",
-    "build:android": "cd example/android && ./gradlew assembleDebug --no-daemon --console=plain -PreactNativeArchitectures=arm64-v8a",
-    "build:ios": "cd example/ios && xcodebuild -workspace IphoneStatusBarExample.xcworkspace -scheme IphoneStatusBarExample -configuration Debug -sdk iphonesimulator CC=clang CPLUSPLUS=clang++ LD=clang LDPLUSPLUS=clang++ GCC_OPTIMIZATION_LEVEL=0 GCC_PRECOMPILE_PREFIX_HEADER=YES ASSETCATALOG_COMPILER_OPTIMIZATION=time DEBUG_INFORMATION_FORMAT=dwarf COMPILER_INDEX_STORE_ENABLE=NO",
-    "bootstrap": "yarn example && yarn install && yarn example pods",
-    "clean": "del-cli android/build example/android/build example/android/app/build example/ios/build"
+    "release": "release-it"
   },
   "keywords": [
     "react-native",
     "ios",
-    "android"
+    "iphone",
+    "status bar"
   ],
   "repository": "https://github.com/linchCN/react-native-iphone-status-bar",
   "author": "linch <369955292@qq.com> (https://github.com/linchCN)",
@@ -84,7 +80,7 @@
     "react-native": "*"
   },
   "engines": {
-    "node": ">= 18.0.0"
+    "node": ">= 16.0.0"
   },
   "packageManager": "^yarn@1.22.15",
   "jest": {
