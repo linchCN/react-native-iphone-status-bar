@@ -1,6 +1,6 @@
 {
   "name": "react-native-iphone-status-bar",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Small library that helps you to get status bar height, P.S iPhone 6/7/8/X/11/12/13/14/15",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
