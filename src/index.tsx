@@ -6,20 +6,23 @@ const LINKING_ERROR =
   '- You rebuilt the app after installing the package\n' +
   '- You are not using Expo Go\n';
 
-const IphoneStatusBar = NativeModules.IphoneStatusBar
-  ? NativeModules.IphoneStatusBar
-  : new Proxy(
-      {},
-      {
-        get() {
-          throw new Error(LINKING_ERROR);
-        },
-      }
-    );
+const IphoneStatusBar =
+  Platform.OS !== 'ios'
+    ? undefined
+    : NativeModules.IphoneStatusBar
+    ? NativeModules.IphoneStatusBar
+    : new Proxy(
+        {},
+        {
+          get() {
+            throw new Error(LINKING_ERROR);
+          },
+        }
+      );
 
 const StatusBarHeight = Platform.select({
   android: 0,
-  ios: IphoneStatusBar.statusBarHeight,
+  ios: IphoneStatusBar?.statusBarHeight,
 });
 
 export default StatusBarHeight;
